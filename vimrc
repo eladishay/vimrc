@@ -1,0 +1,24 @@
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/Shougo/neocomplete.vim.git'
+Plug 'https://github.com/tpope/vim-fugitive.git'
+Plug 'roosta/srcery'
+call plug#end()
+
+map <C-n> :NERDTreeToggle<CR>
+
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" " Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" " Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" " Close popup by <Space>.
+inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() . "\<Space>" : "\<Space>"
+
+:color srcery
