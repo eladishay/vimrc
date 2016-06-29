@@ -4,6 +4,7 @@ Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Shougo/neocomplete.vim.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
+Plug 'vim-scripts/indentpython.vim'
 Plug 'roosta/srcery'
 call plug#end()
 
@@ -28,3 +29,14 @@ let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
+" Python PEP8 config
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+
+let python_highlight_all=1
+syntax on
